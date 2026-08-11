@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>欧作豪 · AI 数字服务工坊</title>
+<meta name="description" content="嵌入式工程师 × Python/Web 开发者 × AI 应用实践者。提供 AI 编程开发定制、提示词包、AI 原创壁纸等服务。">
+<style>
+  :root{
+    --bg:#0a0e17; --bg2:#111827; --card:#151d2e; --border:#23314d;
+    --text:#e6edf7; --muted:#93a4c0; --acc:#4f8cff; --acc2:#22d3ee; --gold:#f5b544;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;line-height:1.7}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;z-index:50;background:rgba(10,14,23,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-weight:800;letter-spacing:.5px}
+  .logo span{color:var(--acc)}
+  nav a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:22px;transition:.2s}
+  nav a:hover{color:var(--acc2)}
+  .hero{padding:90px 0 60px;text-align:center;background:radial-gradient(900px 400px at 50% -10%,rgba(79,140,255,.22),transparent 60%)}
+  .hero h1{font-size:44px;font-weight:800;letter-spacing:1px}
+  .hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{margin-top:14px;color:var(--muted);font-size:17px;max-width:720px;margin-left:auto;margin-right:auto}
+  .chips{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .chip{background:var(--card);border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--muted)}
+  .cta{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:11px 26px;border-radius:10px;text-decoration:none;font-weight:600;transition:.2s;border:1px solid transparent}
+  .btn-primary{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#04121f}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(79,140,255,.35)}
+  .btn-ghost{border-color:var(--border);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--acc2);color:var(--acc2)}
+  section{padding:64px 0}
+  .sec-title{font-size:26px;font-weight:800;margin-bottom:8px}
+  .sec-sub{color:var(--muted);margin-bottom:30px;font-size:14px}
+  .grid{display:grid;gap:18px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;transition:.25s}
+  .card:hover{transform:translateY(-4px);border-color:var(--acc)}
+  .card .ico{font-size:28px}
+  .card h3{font-size:17px;margin:10px 0 6px}
+  .card p{color:var(--muted);font-size:13.5px}
+  .price{color:var(--gold);font-weight:700}
+  .product{display:flex;gap:26px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px;margin-bottom:20px;align-items:center}
+  .product img{width:180px;height:240px;object-fit:cover;border-radius:10px;border:1px solid var(--border);flex:none}
+  .product h3{font-size:20px}
+  .product .tag{display:inline-block;font-size:12px;background:rgba(79,140,255,.15);color:var(--acc2);border:1px solid rgba(79,140,255,.4);border-radius:6px;padding:2px 8px;margin-bottom:8px}
+  .product p{color:var(--muted);font-size:14px;margin:8px 0}
+  .skills{display:flex;flex-wrap:wrap;gap:10px}
+  .skill{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:13px}
+  .skill b{color:var(--acc2)}
+  .contact{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .contact .card{text-align:center;padding:20px 14px}
+  .contact .card .ico{font-size:24px}
+  .contact .card b{display:block;margin-top:8px}
+  .contact .card span{font-size:12.5px;color:var(--muted)}
+  footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;color:var(--muted);font-size:13px}
+  @media(max-width:800px){
+    .g3,.g4,.contact{grid-template-columns:repeat(2,1fr)}
+    .product{flex-direction:column;text-align:center}
+    .hero h1{font-size:32px}
+    nav a{margin-left:14px;font-size:13px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-wrap">
+    <nav>
+      <div class="logo">OU<span>·</span>工坊</div>
+      <div>
+        <a href="#services">服务</a>
+        <a href="#products">产品</a>
+        <a href="#about">关于</a>
+        <a href="#contact">联系</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>你好，我是<em>欧作豪</em></h1>
+    <p>嵌入式工程师 × Python/Web 开发者 × AI 应用实践者。<br>用代码和 AI 帮你把想法变成能跑、能卖、能赚钱的产品。</p>
+    <div class="chips">
+      <span class="chip">C / 嵌入式 STM32·ESP32</span>
+      <span class="chip">Python 自动化·爬虫</span>
+      <span class="chip">Web 建站·小程序</span>
+      <span class="chip">AI 提示词·AI 绘画</span>
+      <span class="chip">3D / VRChat 形象</span>
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="#contact">立即咨询接单</a>
+      <a class="btn btn-ghost" href="#products">看看我的产品</a>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2 class="sec-title">服务与接单</h2>
+    <p class="sec-sub">价格透明，先沟通后开工，满意再付款</p>
+    <div class="grid g4">
+      <div class="card">
+        <div class="ico">🤖</div>
+        <h3>AI 编程开发定制</h3>
+        <p>批量文件处理、自动化脚本、小程序 / 网页定制、爬虫与数据服务。50 元起，复杂需求议价。</p>
+      </div>
+      <div class="card">
+        <div class="ico">🔌</div>
+        <h3>嵌入式开发</h3>
+        <p>STM32 / ESP32 / MSPM0 驱动、LVGL 界面、蓝牙 Wi-Fi 联调、PCB 协助。按项目报价。</p>
+      </div>
+      <div class="card">
+        <div class="ico">🎨</div>
+        <h3>AI 绘画与设计</h3>
+        <p>提示词定制、AI 图像生成与高清放大、壁纸 / 头像 / 封面设计，快速交付。</p>
+      </div>
+      <div class="card">
+        <div class="ico">💡</div>
+        <h3>技术咨询 / 教学</h3>
+        <p>代码调试、环境配置、毕设 / 课设辅导、工具链搭建，按小时或按次收费。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="wrap">
+    <h2 class="sec-title">数字产品</h2>
+    <p class="sec-sub">虚拟商品，付款后发货，带唯一编号</p>
+
+    <div class="product">
+      <img src="assets/prompt-cover.png" alt="AI提示词包封面">
+      <div>
+        <span class="tag">走量引流款</span>
+        <h3>AI 高效提示词大全 · 2026 版</h3>
+        <p>120+ 精选模板，覆盖 7 大场景：写作、编程、办公、学习、绘画、自媒体、生活。附进阶技巧与避坑指南，到手即用。</p>
+        <p class="price">¥9.9 / 单包　¥19.9 / 合集</p>
+        <a class="btn btn-ghost" href="https://github.com/wild0408/ou-digital-studio" target="_blank" rel="noopener">查看目录</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="assets/wallpaper-cover.png" alt="AI原创壁纸包封面">
+      <div>
+        <span class="tag">新品尝鲜</span>
+        <h3>AI 原创壁纸包 · 2026 版</h3>
+        <p>3 大主题 × 6 张 = 18 张高清手机壁纸：赛博朋克 / 国漫古风 / 极简星空。AI 生成 + 4x 超分，适配主流手机分辨率。</p>
+        <p class="price">¥9.9 / 单主题　¥19.9 / 三主题合集</p>
+        <a class="btn btn-ghost" href="#contact">购买 / 看预览</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="sec-title">关于我</h2>
+    <p class="sec-sub">南京信息工程大学 微电子专业 · 在校工程师</p>
+    <div class="card">
+      <p>平时折腾嵌入式（STM32 / ESP32 / MSPM0 + LVGL）、Python 自动化、Web 开发与 AI 应用，也做 VRChat 形象（14+ 成品经验）、用 Blender / AE / FL Studio 做点创作。熟悉把想法从 0 到 1 落地，交付快、好沟通、不跑路。</p>
+      <div class="skills" style="margin-top:16px">
+        <span class="skill"><b>C</b> / 嵌入式</span>
+        <span class="skill"><b>Python</b> 自动化·爬虫</span>
+        <span class="skill"><b>Web</b> 前端 / 建站</span>
+        <span class="skill">STM32 · ESP32 · MSPM0</span>
+        <span class="skill">LVGL 界面</span>
+        <span class="skill">AI 绘画 / 提示词</span>
+        <span class="skill">Blender / AE / FL Studio</span>
+        <span class="skill">VRChat 形象</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2 class="sec-title">联系我</h2>
+    <p class="sec-sub">优先走闲鱼下单（有平台保障），也可以直接私信沟通</p>
+    <div class="contact">
+      <div class="card">
+        <div class="ico">🐟</div>
+        <b>闲鱼</b>
+        <span>搜「欧作豪」或私信获取链接</span>
+      </div>
+      <div class="card">
+        <div class="ico">💬</div>
+        <b>QQ</b>
+        <span>（待填写）</span>
+      </div>
+      <div class="card">
+        <div class="ico">✉️</div>
+        <b>邮箱</b>
+        <span>（待填写）</span>
+      </div>
+      <div class="card">
+        <div class="ico">🌐</div>
+        <b>GitHub</b>
+        <span>github.com/wild0408</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 欧作豪 · OU 工坊 · 用代码和 AI 创造价值</div>
+</footer>
+
+</body>
+</html>
