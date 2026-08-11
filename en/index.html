@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaowu Studio · AI Digital Services & Products</title>
+<meta name="description" content="Indie digital studio: AI coding & embedded dev services, AI prompt toolkit, AI wallpapers. Crypto-friendly — pay with USDT or PayPal.">
+<style>
+  :root{--bg:#0a0e17;--bg2:#111827;--card:#151d2e;--border:#23314d;--text:#e6edf7;--muted:#93a4c0;--acc:#4f8cff;--acc2:#22d3ee;--gold:#f5b544;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.7}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;z-index:50;background:rgba(10,14,23,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-weight:800;letter-spacing:.5px}
+  .logo span{color:var(--acc)}
+  nav a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:22px;transition:.2s}
+  nav a:hover{color:var(--acc2)}
+  .lang{color:var(--acc2);border:1px solid var(--border);padding:4px 12px;border-radius:999px;font-size:13px}
+  .hero{padding:90px 0 60px;text-align:center;background:radial-gradient(900px 400px at 50% -10%,rgba(79,140,255,.22),transparent 60%)}
+  .hero h1{font-size:42px;font-weight:800}
+  .hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{margin-top:14px;color:var(--muted);font-size:17px;max-width:760px;margin-left:auto;margin-right:auto}
+  .chips{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .chip{background:var(--card);border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--muted)}
+  .cta{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:11px 26px;border-radius:10px;text-decoration:none;font-weight:600;transition:.2s;border:1px solid transparent}
+  .btn-primary{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#04121f}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(79,140,255,.35)}
+  .btn-ghost{border-color:var(--border);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--acc2);color:var(--acc2)}
+  section{padding:64px 0}
+  .sec-title{font-size:26px;font-weight:800;margin-bottom:8px}
+  .sec-sub{color:var(--muted);margin-bottom:30px;font-size:14px}
+  .grid{display:grid;gap:18px}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;transition:.25s}
+  .card:hover{transform:translateY(-4px);border-color:var(--acc)}
+  .card .ico{font-size:28px}
+  .card h3{font-size:17px;margin:10px 0 6px}
+  .card p{color:var(--muted);font-size:13.5px}
+  .price{color:var(--gold);font-weight:700}
+  .product{display:flex;gap:26px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px;margin-bottom:20px;align-items:center}
+  .product img{width:180px;height:240px;object-fit:cover;border-radius:10px;border:1px solid var(--border);flex:none}
+  .product h3{font-size:20px}
+  .product .tag{display:inline-block;font-size:12px;background:rgba(79,140,255,.15);color:var(--acc2);border:1px solid rgba(79,140,255,.4);border-radius:6px;padding:2px 8px;margin-bottom:8px}
+  .product p{color:var(--muted);font-size:14px;margin:8px 0}
+  .gallery{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .gallery img{width:110px;height:138px;object-fit:cover;border-radius:8px;border:1px solid var(--border)}
+  .contact{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .contact .card{text-align:center;padding:20px 14px}
+  .contact .card .ico{font-size:24px}
+  .contact .card b{display:block;margin-top:8px}
+  .contact .card span{font-size:12.5px;color:var(--muted)}
+  .addr{font-size:11px;word-break:break-all}
+  footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;color:var(--muted);font-size:13px}
+  @media(max-width:800px){
+    .g4,.contact{grid-template-columns:repeat(2,1fr)}
+    .product{flex-direction:column;text-align:center}
+    .hero h1{font-size:30px}
+    nav a{margin-left:14px;font-size:13px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="logo">Zao<span>wu</span> Studio</div>
+      <div>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#buy">Buy</a>
+        <a href="#about">About</a>
+        <a class="lang" href="/ou-digital-studio/">中文</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Welcome to <em>Zaowu Studio</em></h1>
+    <p>An indie digital studio: AI coding & embedded development services, AI prompt toolkits, and original AI wallpapers.<br>We turn ideas into working products — fast, reliable, crypto-friendly (USDT / PayPal).</p>
+    <div class="chips">
+      <span class="chip">C / Embedded STM32 · ESP32 · MSPM0</span>
+      <span class="chip">Python Automation · Scraping</span>
+      <span class="chip">Web · Landing Pages · Mini Apps</span>
+      <span class="chip">AI Prompts · AI Art</span>
+      <span class="chip">3D / VRChat Avatars</span>
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="#buy">How to Buy</a>
+      <a class="btn btn-ghost" href="#products">Browse Products</a>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2 class="sec-title">Services & Freelance</h2>
+    <p class="sec-sub">Fixed quotes up front · 50% deposit · delivery with documentation</p>
+    <div class="grid g4">
+      <div class="card">
+        <div class="ico">🤖</div>
+        <h3>AI Coding & Automation</h3>
+        <p>Batch file processing, automation scripts, web scrapers & data pipelines, small web apps. From $20.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🔌</div>
+        <h3>Embedded Development</h3>
+        <p>STM32 / ESP32 / MSPM0 firmware, LVGL UI, Wi-Fi/BT integration, PCB help. Quoted per project.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🎨</div>
+        <h3>AI Art & Design</h3>
+        <p>Custom prompts, AI image generation & 4x upscaling, wallpapers, avatars, cover designs. Fast turnaround.</p>
+      </div>
+      <div class="card">
+        <div class="ico">💡</div>
+        <h3>Consulting / Mentoring</h3>
+        <p>Code debugging, environment setup, project guidance, toolchains. Per hour or per task.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="wrap">
+    <h2 class="sec-title">Digital Products</h2>
+    <p class="sec-sub">Instant delivery · personal license · unique order ID</p>
+
+    <div class="product">
+      <img src="../assets/prompt-cover.png" alt="AI Prompt Mastery Toolkit cover">
+      <div>
+        <span class="tag">Best Seller</span>
+        <h3>AI Prompt Mastery Toolkit 2026</h3>
+        <p>75+ ready-to-use templates across 8 scenarios: universal, writing, coding, marketing, study, productivity, life, business. Includes advanced techniques & a 10-mistakes fix table.</p>
+        <p class="price">$4.90 (launch) · $9.90 later</p>
+        <a class="btn btn-ghost" href="../samples/ai-prompt-sample.md">Free Sample (3 templates)</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="../assets/wallpaper-cover.png" alt="AI Wallpaper Pack cover">
+      <div>
+        <span class="tag">New</span>
+        <h3>AI Wallpaper Pack 2026 — 18 Originals</h3>
+        <p>3 themes × 6 wallpapers: Cyberpunk / Chinese Guofeng / Minimal & Space. 2304x4096 (4x upscaled), ready for modern phones. 100% original AI art.</p>
+        <p class="price">$7.90 all-in-one · $3.90 per theme</p>
+        <div class="gallery">
+          <img src="../assets/wall-preview-1.jpg" alt="cyberpunk preview">
+          <img src="../assets/wall-preview-2.jpg" alt="guofeng preview">
+          <img src="../assets/wall-preview-3.jpg" alt="minimal preview">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="buy">
+  <div class="wrap">
+    <h2 class="sec-title">How to Buy</h2>
+    <p class="sec-sub">Choose what works for you — USDT, PayPal, or Telegram</p>
+    <div class="contact">
+      <div class="card">
+        <div class="ico">₮</div>
+        <b>USDT (TRC20)</b>
+        <span class="addr">THZ6oQiFZhxV8rDtivUE569kvu1yCAzKoo</span>
+        <img src="../assets/usdt-qr.png" alt="USDT QR" style="width:120px;height:120px;margin-top:8px;border-radius:8px">
+      </div>
+      <div class="card">
+        <div class="ico">🅿️</div>
+        <b>PayPal</b>
+        <span>Coming soon (registering)</span>
+      </div>
+      <div class="card">
+        <div class="ico">🛒</div>
+        <b>Gumroad</b>
+        <span>Auto-delivery shop — coming soon</span>
+      </div>
+      <div class="card">
+        <div class="ico">✈️</div>
+        <b>Telegram</b>
+        <span>Order via DM (username coming soon)</span>
+      </div>
+    </div>
+    <p class="sec-sub" style="margin-top:18px">After payment, message me (Telegram / email) with your order + payment proof — delivery with a unique license ID.</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="sec-title">About the Studio</h2>
+    <p class="sec-sub">Indie developer · Embedded + AI applications</p>
+    <div class="card">
+      <p>A small studio that loves code and AI: embedded (STM32 / ESP32 / MSPM0 + LVGL), Python automation, web development, AI apps — plus VRChat avatars and Blender/AE/FL Studio creations. We take ideas from 0 to 1: fast delivery, clear communication, no ghosting.</p>
+      <div class="chips" style="margin-top:16px">
+        <span class="chip">C / Embedded</span>
+        <span class="chip">Python</span>
+        <span class="chip">Web</span>
+        <span class="chip">STM32 · ESP32 · MSPM0</span>
+        <span class="chip">LVGL UI</span>
+        <span class="chip">AI Art / Prompts</span>
+        <span class="chip">Blender / AE / FL Studio</span>
+        <span class="chip">VRChat Avatars</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Zaowu Studio · Building with code & AI</div>
+</footer>
+
+</body>
+</html>
